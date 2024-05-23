@@ -10,7 +10,8 @@ int main(void)
 	
 	// Salarios
 	float salarios[count], impostos[count];
-	for(int i = 0; i < count; i++) printf("Digite o salario %d", i+1), scanf("%f", salarios[i]);
+	for(int i = 0; i < count; i++) printf("Digite o salario %d: ", i+1), scanf("%f", &salarios[i]);
+	printf("\n");
 	
 	// Calcular IRF
 	float imposto, salario;
@@ -32,7 +33,7 @@ int main(void)
 	}
 	
 	// Mostrar Impostos
-	for(int i = 0; i < count; i++) printf("Salario %d valor %.2f imposto %.2f\n", i+1, salarios[i], impostos[i]);
+	for(int i = 0; i < count; i++) printf("Salario %d valor %.2f imposto %.2f%%\n", i+1, salarios[i], impostos[i]);
 	
 	// Quebra de linha
 	printf("\n\n");
