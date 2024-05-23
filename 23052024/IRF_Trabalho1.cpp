@@ -14,10 +14,11 @@ int main(void)
 	printf("\n");
 	
 	// Calcular IRF
-	float imposto, salario;
+	//float imposto, salario;
 	for(int i = 0; i < count; i++)
 	{
 		// Ajuste
+		float imposto, salario;
 		salario = salarios[i];
 		imposto = 0.0;
 	
