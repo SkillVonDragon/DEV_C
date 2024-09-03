@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Marcola" />
+        <meta name="description" content="Reserva Hotel Estaciano" />
+        <!-- implementação futura de css -->
+        <link href="css_form.css" rel="stylesheet" />
+        <title>Hotel Estaciano</title>
+    </head>
+
+    <body>
+        <a name="topo">
+        <h1>Formulário de Reserva - Hotel Estaciano</h1>
+        </a>
+        <!-- Link abrindo em outra janel/guia -->
+         <a href="http://estacio.br" target="_blank"> 
+        <!-- target branco(blank) abre em outra aba, não na mesma -->
+            <h3>Voltar para estácio</h3>
+         </a>
+         
+            <h1>Projeto</h1>
+         <!-- Imagem -->
+
+         <figure>
+            <figcaption>Rio de Janeiro</figcaption>
+            <img src="imagens/riofds.jpg" width="300" height="200" alt="Foto das férias no Rio de Janeiro" />
+         </figure>
+
+         <!-- Formulário usando javascript -->
+
+         <form action="#" method="post" oninput="total.value = (noites.valueAsNumber * 250) + ((hospede.valueAsNumber - 1)* 50)">
+         <fieldset>
+            <legend>Dados da reserva</legend>
+
+            <!-- container -->
+
+            <div class="campo">
+                <label>Nome:</label>
+                <input type="text" id="txtNome" name="nome"
+                    placeholder="Digite o nome.." style="width: 20em"
+                    required /> <br />
+            </div><br />
+
+            <!-- se a checkbox nn tiver o msm name você pode marcar ambas, NÃO PODE fazer essa porra -->
+            <div class="campo">
+                <label class="checkbox">Sexo:
+                    <input type="radio" name="sexo" value="m" />Masculino
+                </label>
+                <label class="checkbox">
+                    <input type="radio" name="sexo" value="f" />Feminino
+                </label><br /> <br />
+            </div>
+
+            <div class="campo">
+                <label>E-mail:</label>
+                <input type="email" id="txtEmail" name="email" 
+                placeholder="Digite o email.." required /><br /><br />
+            </div>
+
+            <div class="campo">
+                <label>Repita o Email:</label>
+                <input type="email" id="email_repeti" name="email_repeti" required
+                        oninput="check(this)" /><br /><br />
+            </div>
+
+            <div class="campo">
+                <label>Data de chegada:</label>
+                <input type="date" id="dt_chegada" name="dt_chegada" required /><br /><br />
+            </div>
+
+            <div class="campo">
+                <label>Número de noites (R$250,00 por noite):</label>
+                <input type="number" id="noites" name="noites" value="1" min="1" max="30"
+                        required /><br /><br />
+            </div>
+
+            <div>
+                <label>Número de hóspedes (R$50,00 adicional por noite):</label>
+                <input type="number" id="hospede" name="hospede" value="1" min="1" max="4"
+                        required /><br /><br />
+            </div>
+
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label>Total estimado:</label>
+                    R$<output id="total" name="total">250</output>.00
+                <br /></div>
+            </fieldset><br />
+
+            <div class="campo">
+                <label>Mensagem</label>
+                <textarea name="message" style="width: 40em"
+                    placeholder="Algum cometário extra?"></textarea><br /><br />
+            </div>
+
+            <div class="campo">
+                <label>Código promocional:</label>
+                <input type="text" id="txtPromo" name="promo" maxlength="6"
+                        pattern="[A-Za-z0-9]{6}"
+                    title="Código promocional consiste em 6 caracteres alfanuméricos." /><br />
+            </div><br />
+
+            <div class="campo">
+                <label>Newsletter</label>
+                <label class="checkbox">
+                    <input type="checkbox" name="newsletter" value="1" />Gostaria de Receber a
+                            nossa Newsletter </label><br /><br />
+            </div>
+
+            <button class="botao submit" type="submit" name="submit">
+                Requerer reserva   
+            </button>
+        <!-- fieldset = caixinha nova -->
+         </fieldset>
+    </form>
+    <a href="#topo"><p>Voltar ao início</p></a>
+
+    </body>
+</html>
